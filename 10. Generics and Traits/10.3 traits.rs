@@ -1,6 +1,5 @@
 1.
 
-```rust
 trait Hello {
     fn say_hi(&self) -> String {
         String::from("hi")
@@ -35,11 +34,10 @@ fn main() {
     assert_eq!(t.say_hi(), "Hi, I'm your new teacher");
     assert_eq!(t.say_something(), "I'm not a bad teacher");
 }
-```
+
 
 2.
 
-```rust
 // `Centimeters`, a tuple struct that can be compared
 #[derive(PartialEq, PartialOrd)]
 struct Centimeters(f64);
@@ -83,11 +81,10 @@ fn main() {
 
     println!("One foot is {} than one meter.", cmp);
 }
-```
+
 
 3.
 
-```rust
 use std::ops;
 
 // implement fn multiply to make the code work
@@ -101,11 +98,10 @@ fn main() {
     assert_eq!(6, multiply(2u8, 3u8));
     assert_eq!(5.0, multiply(1.0, 5.0));
 }
-```
+
 
 4.
 
-```rust
 use std::ops;
 
 struct Foo;
@@ -142,11 +138,10 @@ fn main() {
     assert_eq!(Foo + Bar, FooBar);
     assert_eq!(Foo - Bar, BarFoo);
 }
-```
+
 
 5.
 
-```rust
 // implement `fn summary` to make the code work
 // fix the errors without removing any code line
 trait Summary {
@@ -199,11 +194,10 @@ fn main() {
 fn summary(t: &impl Summary) {
     let _ = t.summarize();
 }
-```
+
 
 6.
 
-```rust
 struct Sheep {}
 struct Cow {}
 
@@ -238,9 +232,9 @@ fn main() {
     let animal = random_animal(random_number);
     println!("You've randomly chosen an animal, and it says {}", animal.noise());
 }
-```
 
-```rust
+
+
 struct Sheep {}
 struct Cow {}
 
@@ -275,11 +269,10 @@ fn main() {
     let animal = random_animal(random_number);
     println!("You've randomly chosen an animal, and it says {}", animal.noise());
 }
-```
+
 
 7.
 
-```rust
 fn main() {
     assert_eq!(sum(1, 2), 3);
     assert_eq!(sum(1.0, 2.0), 3.0);
@@ -288,9 +281,8 @@ fn main() {
 fn sum<T: std::ops::Add<Output = T>>(x: T, y: T) -> T {
     x + y
 }
-```
 
-```rust
+
 fn main() {
     assert_eq!(sum(1, 2), 3);
     assert_eq!(sum(1.0, 2.0), 3.0);
@@ -302,11 +294,10 @@ where
 {
     x + y
 }
-```
+
 
 8.
 
-```rust
 struct Pair<T> {
     x: T,
     y: T,
@@ -342,11 +333,10 @@ fn main() {
 
     pair.cmp_display();
 }
-```
+
 
 9.
 
-```rust
 fn example1() {
     // `T: Trait` is the commonly used way
     // `T: Fn(u32) -> u32` specifies that we can only pass a closure to `T`
@@ -423,4 +413,3 @@ fn main() {
     example1();
     example2();
 }
-```
