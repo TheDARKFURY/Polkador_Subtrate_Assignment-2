@@ -55,7 +55,7 @@ fn main() {
 fn take<T>(_v: T) {
 
 }
-``.
+
 fn main() {
      // A non-copy type.
      let movable = Box::new(3);
@@ -101,7 +101,7 @@ fn main() {
     let x = vec![1, 2, 3];
     fn_once(|z|{z == x.len()})
 }
-``.
+
 fn fn_once<F>(func: F)
 where
     F: FnOnce(usize) -> bool + Copy,// 改动在这里
@@ -234,7 +234,7 @@ fn main() {
     let fn_plain = create_fn();
     fn_plain(1);
 }
-``.
+
 /* Fill in the blank and fix the errror */
 fn create_fn() -> Box<dyn Fn(i32) -> i32> {
     let num = 5;
